@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <tabs>
+    <Tab text="Untitled Tab 1">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="text_x0" layoutX="790.0" layoutY="52.0" />
+                  <TextField fx:id="text_y0" layoutX="790.0" layoutY="102.0" />
+                  <TextField fx:id="text_X" layoutX="790.0" layoutY="152.0" />
+                  <TextField fx:id="text_N" layoutX="790.0" layoutY="202.0" />
+                  <Button fx:id="button" layoutX="830.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleButtonClick" text="calculate">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="765.0" layoutY="56.0" text="x0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="765.0" layoutY="105.0" text="y0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="765.0" layoutY="155.0" text="X">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="765.0" layoutY="205.0" text="N">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <LineChart fx:id="functionGraph" focusTraversable="true" layoutX="24.0" layoutY="25.0" prefHeight="318.0" prefWidth="685.0" styleClass="chart-series-line" stylesheets="@chart-siries-line.css">
+                    <xAxis>
+                      <NumberAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <LineChart fx:id="errorGraph" layoutX="24.0" layoutY="357.0" prefHeight="298.0" prefWidth="686.0">
+                     <xAxis>
+                        <NumberAxis side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis side="LEFT" />
+                     </yAxis>
+                  </LineChart>
+                  <Label fx:id="errorLabel" layoutX="747.0" layoutY="335.0" prefHeight="8.0" prefWidth="234.0" text="You need to specify all parameters" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="tab2" disable="true" text="Untitled Tab 2">
+      <content>
+        <AnchorPane disable="true" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <LineChart fx:id="nErrorGraph" layoutX="42.0" layoutY="193.0" prefHeight="328.0" prefWidth="570.0">
+                    <xAxis>
+                      <NumberAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <TextField fx:id="tab2_text_n0" layoutX="746.0" layoutY="101.0" />
+                  <TextField fx:id="tab2_text_N" layoutX="746.0" layoutY="193.0" />
+                  <Label layoutX="716.0" layoutY="103.0" text="n0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="718.0" layoutY="195.0" text="N">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="button2" layoutX="783.0" layoutY="255.0" mnemonicParsing="false" onAction="#handleOnButton2Click" text="calculate">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
